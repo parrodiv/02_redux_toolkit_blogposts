@@ -1,8 +1,11 @@
-import React from 'react';
+
+import PostsList from "./features/posts/PostsList";
 
 function App() {
   return (
-   <main className="App"></main>
+   <main className="App">
+    <PostsList />
+   </main>
   );
 }
 

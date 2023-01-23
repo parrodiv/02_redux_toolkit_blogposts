@@ -3,9 +3,12 @@ import { selectAllPosts } from './postsSlice'
 import PostAuthor from './PostAuthor'
 import TimeAgo from './TimeAgo'
 import ReactionsButtons from './ReactionsButtons'
+import { sub } from 'date-fns/esm'
 
 const PostsList = () => {
   const posts = useSelector(selectAllPosts)
+
+  console.log(sub(new Date(), {minutes: 10}).toISOString())
 
   const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
   //slice is going to create a copy of the posts array

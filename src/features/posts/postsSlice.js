@@ -7,6 +7,7 @@ const initialState = [
     title: 'Learning Redux Toolkit',
     content: "I've heard good thing",
     date: sub(new Date(), { minutes: 10 }).toISOString(),
+    // it will subtract 10 minutes from the actual date
     reactions: {
       thumbsUp: 0,
       wow: 0,

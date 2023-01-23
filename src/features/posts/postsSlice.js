@@ -45,7 +45,7 @@ const postsSlice = createSlice({
             title,
             content,
             date: new Date().toISOString(),
-            userId,
+            userId,  //author of post
             reactions: {
               thumbsUp: 0,
               wow: 0,

@@ -12,6 +12,8 @@ const reactionEmoji = {
 const ReactionsButtons = ({ post }) => {
   const dispatch = useDispatch()
 
+  // Object.entries(reactionEmoji) reutrns [ ['thumbsUp', '👍'], ['wow', '😮'] ecc.... ]
+  // so I map over key value arrays in one wrapper array
   const reactionButtons = Object.entries(reactionEmoji).map(([name, emoji]) => {
     return (
       <button
@@ -23,7 +25,7 @@ const ReactionsButtons = ({ post }) => {
         }
       >
         {emoji} {post.reactions[name]}
-         {/*emoji e value of specific reaction (0,1,2,3 ecc.) */}
+        {/*emoji e value of specific reaction (0,1,2,3 ecc.) */}
       </button>
     )
   })
